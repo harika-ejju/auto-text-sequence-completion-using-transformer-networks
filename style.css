@@ -1,0 +1,158 @@
+/* Main color variables */
+:root {
+    --navy-blue: #1E3A8A;
+    --navy-blue-light: #2C4A9E;
+    --navy-blue-dark: #142C6A;
+    --olive: #808000;
+    --olive-light: #9A9E36;
+    --olive-dark: #5F6000;
+    --bg-color: #F8F9FA;
+    --text-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Base styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header styles */
+.header-container {
+    background: linear-gradient(135deg, var(--navy-blue), var(--navy-blue-dark));
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px var(--shadow-color), 0 1px 3px var(--shadow-color);
+    text-align: center;
+}
+
+.header-container h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--navy-blue);
+    font-size: 1.2rem;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+/* Input container */
+.input-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px var(--shadow-color);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--olive);
+}
+
+/* Prediction container */
+.prediction-container {
+    background: linear-gradient(to right, white, rgba(128, 128, 0, 0.05));
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    margin: 20px 0;
+    border: 1px solid rgba(128, 128, 0, 0.2);
+    position: relative;
+}
+
+.prediction-container h3 {
+    color: var(--navy-blue);
+    font-size: 1.2rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--olive-light);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.prediction-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.highlight {
+    background: linear-gradient(to bottom, transparent 60%, var(--olive-light) 60%, var(--olive-light) 90%, transparent 90%);
+    color: var(--navy-blue-dark);
+    font-weight: 500;
+    padding: 0 2px;
+}
+
+/* Button styles */
+.stButton > button {
+    background-color: var(--olive) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.stButton > button:hover {
+    background-color: var(--olive-dark) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Text area styling */
+textarea {
+    border: 2px solid #E8E8E8 !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    font-size: 1.1rem !important;
+    transition: border 0.3s ease !important;
+}
+
+textarea:focus {
+    border: 2px solid var(--olive) !important;
+    box-shadow: 0 0 0 2px rgba(128, 128, 0, 0.2) !important;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: var(--navy-blue);
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+/* 2D Effects for elements */
+.stExpander {
+    border-radius: 8px !important;
+    box-shadow: 2px 2px 0 var(--navy-blue-dark) !important;
+    border: 1px solid var(--navy-blue) !important;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #E0E0E0;
+        --shadow-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .input-container, .prediction-container {
+        background: #1E1E1E;
+    }
+    
+    .prediction-container {
+        background: linear-gradient(to right, #1E1E1E, rgba(128, 128, 0, 0.1));
+    }
+    
+    .highlight {
+        background: linear-gradient(to bottom, transparent 60%, rgba(128, 128, 0, 0.4) 60%, rgba(128, 128, 0, 0.4) 90%, transparent 90%);
+        color: #E0E0E0;
+    }
+}
+
